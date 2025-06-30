@@ -1,0 +1,124 @@
+{
+  "84": {
+    "inputs": {
+      "image": "girl.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "85": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "100",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "90": {
+    "inputs": {
+      "images": [
+        "98",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "91": {
+    "inputs": {
+      "image": "sofa.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "96": {
+    "inputs": {
+      "image": "dog.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "97": {
+    "inputs": {
+      "direction": "down",
+      "match_image_size": true,
+      "spacing_width": 8,
+      "spacing_color": "white",
+      "image1": [
+        "84",
+        0
+      ],
+      "image2": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "ImageStitch",
+    "_meta": {
+      "title": "Image Stitch"
+    }
+  },
+  "98": {
+    "inputs": {
+      "direction": "left",
+      "match_image_size": true,
+      "spacing_width": 20,
+      "spacing_color": "white",
+      "image1": [
+        "97",
+        0
+      ],
+      "image2": [
+        "91",
+        0
+      ]
+    },
+    "class_type": "ImageStitch",
+    "_meta": {
+      "title": "Image Stitch"
+    }
+  },
+  "99": {
+    "inputs": {
+      "image": [
+        "98",
+        0
+      ]
+    },
+    "class_type": "easy imageToBase64",
+    "_meta": {
+      "title": "Image To Base64"
+    }
+  },
+  "100": {
+    "inputs": {
+      "prompt": "The character is sitting cross-legged on the sofa wearing a T-shirt with a picture of a Dalmatian dog.  The Dalmatian dog is sleeping on the green rug on the floor.",
+      "input_image": [
+        "99",
+        0
+      ],
+      "aspect_ratio": "16:9",
+      "prompt_upsampling": false,
+      "safety_tolerance": 4,
+      "output_format": "jpeg",
+      "seed": 617
+    },
+    "class_type": "FluxKontextPro_BFL",
+    "_meta": {
+      "title": "Flux Kontext Pro (BFL)"
+    }
+  }
+}
